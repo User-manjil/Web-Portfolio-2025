@@ -1,0 +1,1 @@
+import gamebg from '../assets/gamebg.jpg'
