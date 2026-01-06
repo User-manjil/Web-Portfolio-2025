@@ -63,9 +63,9 @@ const HoverPopup = ({ children, img }) => {
   };
 
   return (
-    <div
+    <div 
       ref={wrapperRef}
-      className="relative"
+      className="relative w-full"
       onMouseEnter={handleEnter}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}

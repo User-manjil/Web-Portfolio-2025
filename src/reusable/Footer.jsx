@@ -8,7 +8,7 @@ const Footer = () => {
   const velocity = 15;
   return (
     <div className='w-full max-w-full justify-center lg:h-90 lg:flex bg-blue-500  relative overflow-hidden z-10'>
-       <div className="  lg:flex text-8xl lg:text-9xl py-1.5 px-10 lg:p-20   font-bold text-white  ">
+       <div className="  lg:flex 6xl sm:7xl md:text-8xl lg:text-9xl py-1.5 px-10 lg:p-20   font-bold text-white  ">
         Manjil Aryal
         </div>
       <div className="flex-col py-20 ">
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Social Link */}
         <div className="flex mt-10 justify-center">
-          <ul className='flex gap-15 text-2xl lg:text-2xl justify-center text-white'>
+          <ul className='flex gap-5 lg:gap-10 text-xl lg:text-2xl justify-center text-white'>
             <li><a target='_blank' href="https://www.facebook.com/manjil.aryal.307027/"><i className="fa-brands fa-facebook"></i></a></li>
             <li><a target='_blank' href="https://www.instagram.com/ma_manjil/"><i className="fa-brands fa-square-instagram"></i></a></li>
             <li><a target='_blank' href="https://www.linkedin.com/in/manzeel-aryal/"><i className="fa-brands fa-linkedin"></i></a></li>

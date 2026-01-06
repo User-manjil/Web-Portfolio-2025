@@ -112,7 +112,7 @@ const Banner = () => {
 
   return gameMode ? (
     /* ------------------ MENU SCREEN ------------------ */
-    <div className="w-full  bg-blue-500 flex flex-col rounded-sm items-center justify-center text-white p-5">
+    <div className="w-full bg-[url('/bounceBanner.png')] bg-contain lg:bg-cover  bg-no-repeat  bg-blue-500 flex flex-col rounded-sm items-center justify-center text-white p-5">
 
       <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-bounce">
         Bouncy Ball
@@ -124,7 +124,7 @@ const Banner = () => {
 
       <button
         onClick={() => setGameMode(false)}
-        className="border-2 border-white px-8 py-3 rounded-sm text-xl hover:bg-white hover:text-black transition-all"
+        className="border-2 cursor-pointer  px-8 py-3 rounded-sm text-xl bg-white text-black transition-all"
       >
         Play Game
       </button>

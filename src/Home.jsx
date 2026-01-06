@@ -63,7 +63,7 @@ const Home = () => {
           </div>
         </div>
         <div className="box flex h-full  flex-col gap-0 lg:leading-29 mb-3 sm:mb-10 2xl:mb-20 ">
-          <div  className=" text-box opacity-0 flex lg:text-8xl text-4xl font-semibold">I am Manjil</div>
+          <div  className=" text-box opacity-0 flex sm:text-3xl md:text-6xl lg:text-8xl text-3xl font-semibold">I am Manjil</div>
           <div className="  flex w-full max-w-[1920px] relative   font-bold text-blue-500">
             
             <h1 className="text-box opacity-0 absolute text-3xl sm:text-6xl md:text-7xl lg:text-[10vw]  xl:text-[10vw]  2xl:text-[8vw]">
@@ -133,12 +133,14 @@ const Home = () => {
           </div>
         </div>
         {/* About me sections */}
-        <div className="flex flex-col md:flex mt-10">
+        <div className="flex flex-col mt-10">
           <Title heading="#About me" />
-          <div className="md:flex-row flex w-full gap-5 ">
-            <div className="flex w-full h-90 mt-10 bg-blue-500"> </div>
-            <div className="flex flex-col items-center   w-full mt-10  lg:py-5 ">
-              <p className="lg:text-lg font-medium w-full  ">{aboutMe}</p>
+          <div className="flex-col md:flex-row flex w-full gap-5 ">
+            <div className="flex md:w-1/2 rounded-sm  mt-10   ">
+              <img className="h-full rounded-sm w-full" src="/profile.png" alt="" />
+             </div>
+            <div className="flex flex-col items-center mt-5  w-full   lg:py-5 ">
+              <p className="lg:text-lg font-normal w-full  ">{aboutMe}</p>
 
               <div className="flex gap-10 mt-2">
                 <button  className="bg-blue-500 text-white px-4 py-2 rounded-sm justify-center items-center  mt-5 lg:mt-2 text-center ">
