@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: "mitho-achar",
     title: "Mitho Achar – Nepali Authentic Achar",
@@ -147,4 +147,28 @@ const projects = [
   },
 ];
 
-export default projects;
+export const experience=[
+  {
+    id:1,
+    title:"Graphic Designer",
+    startYear:"2023-present",
+    CompanyName:"Freelance",
+
+  },
+  {
+    id:2,
+    title:"Video Editor",
+    startYear:"2024-present",
+    CompanyName:"Freelance",
+  },
+  {
+    id:3,
+    title:"Frontend Developer",
+    startYear:"2025",
+    CompanyName:"Prime Creative Hub",
+  }
+];
+
+
+
+// export const projects;

@@ -8,7 +8,7 @@ const Footer = () => {
   const velocity = 15;
   return (
     <div className='w-full max-w-full justify-center lg:h-90 lg:flex bg-blue-500  relative overflow-hidden z-10'>
-       <div className="  lg:flex 6xl sm:7xl md:text-8xl lg:text-9xl py-1.5 px-10 lg:p-20   font-bold text-white  ">
+       <div className="text-6xl  lg:flex  sm:7xl md:text-8xl lg:text-9xl py-1.5 px-10 lg:p-20   font-bold text-white  ">
         Manjil Aryal
         </div>
       <div className="flex-col py-20 ">

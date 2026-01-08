@@ -8,10 +8,7 @@ import { gsap } from "gsap"
 import { Link } from "react-router-dom";
 import HoverPopup from "./reusable/Hoverpopup";
 import Banner from "./reusable/Banner";
-// import Banner from './reusable/Banner'
-// import TextPressure from './reusable/Textpressure'
-// import ScrollVelocity from './Decorations/ScrollVelocity.jsx'
-
+import { experience } from "./assets";
 const Home = () => {
   const velocity = 15;
 
@@ -23,6 +20,7 @@ const Home = () => {
     "REACT",
     "MONGODB",
     "MYSQL",
+    'TYPESCRIPT'
   ];
   const tools = [
     "Figma",
@@ -109,10 +107,10 @@ const Home = () => {
           <Title heading="#What I Know" />
           <div className=" mt-10 flex-col gap-5 ">
             <Title heading="#Skills" />
-            <div className=" grid grid-cols-2 md:grid-cols-4 px-10  gap-x-10  gap-y-2 m-auto justify-center ">
+            <div className=" grid grid-cols-2 md:grid-cols-4 px-10  gap-x-10  gap-y-2  justify-center ">
               {skills.map((e) => {
                 return (
-                  <div className="flex px-2 py-1 border rounded-sm text-center items-center justify-around hover:text-white hover:border-transparent hover:bg-blue-500 border-black">
+                  <div className="flex  py-1 text-xs sm:text-lg border rounded-sm text-center items-center justify-around hover:text-white hover:border-transparent hover:bg-blue-500 border-black">
                     {e}
                   </div>
                 );
@@ -124,7 +122,7 @@ const Home = () => {
             <div className=" grid grid-cols-2 md:grid-cols-4   gap-x-10  gap-y-2 m-auto justify-center ">
               {tools.map((e) => {
                 return (
-                  <div className="flex px-2 py-1 border rounded-sm text-center items-center justify-around hover:text-white hover:border-transparent hover:bg-blue-500 border-black">
+                  <div className="flex px-2 py-1 border rounded-sm text-xs sm:text-lg text-center items-center justify-around hover:text-white hover:border-transparent hover:bg-blue-500 border-black">
                     {e}
                   </div>
                 );
@@ -136,27 +134,46 @@ const Home = () => {
         <div className="flex flex-col mt-10">
           <Title heading="#About me" />
           <div className="flex-col md:flex-row flex w-full gap-5 ">
-            <div className="flex md:w-1/2 rounded-sm  mt-10   ">
+            <div className="flex md:w-1/2 rounded-sm  mt-10 border-2 border-black p-2   ">
               <img className="h-full rounded-sm w-full" src="/profile.png" alt="" />
              </div>
             <div className="flex flex-col items-center mt-5  w-full   lg:py-5 ">
               <p className="lg:text-lg font-normal w-full  ">{aboutMe}</p>
 
+              
+              <div className="flex flex-col w-full mt-2"> 
+                    <Title heading="Experience" />
+                   {experience.map((exp)=>{
+                    return( <div className="flex border-black p-2 border-b-2 justify-between">
+                          <div className="flex-col text-xl font-bold   ">
+                            {exp.title}
+                            <div className="flex text-sm text-blue-500 font-medium">{exp.CompanyName}</div>
+                          </div>
+                          <div className="flex flex-col">
+                            {exp.startYear}
+                            {/* <div className="flex text-xs">June-July</div> */}
+                            </div>
+                    </div>)
+                   })
+
+                   }
+              </div>
               <div className="flex gap-10 mt-2">
                 <button  className="bg-blue-500 text-white px-4 py-2 rounded-sm justify-center items-center  mt-5 lg:mt-2 text-center ">
                   <a download={true} href={reactPic}>Resume</a>
                 
               </button>
-              <Link to='/blog' >
-              <button   className="  text-blue-500 px-4 cursor-pointer border py-3 border-blue-500 rounded-sm justify-center items-center  mt-5 lg:mt-2 text-center ">
+              <Link to='/blog'>
+              <button   className="  text-blue-500 px-4 cursor-pointer border py-1 border-blue-500 rounded-sm justify-center items-center  mt-5 lg:mt-2 text-center ">
                 want to know me?
               </button>
               </Link>
               
               </div>
-              
             </div>
+
           </div>
+          
         </div>
        {/* Home Contact Section */}
        <Contact />

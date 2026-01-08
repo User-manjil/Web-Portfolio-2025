@@ -3,11 +3,12 @@ import Title from "./reusable/Title";
 import Project from "./reusable/Project";
 import { Link } from "react-router-dom";
 import HoverPopup from "./reusable/Hoverpopup";
-import projects from "@/assets/index";
+import { projects } from "./assets";
+// import projects from "@/assets/index.js";
 
 const Work = () => {
   const [sortBy, setSortBy] = useState("default");
-
+ 
   const sortedProjects = [...projects].sort((a, b) => {
     if (sortBy === "Newest") {
       return new Date(b.date) - new Date(a.date);

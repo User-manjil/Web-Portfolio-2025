@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import gsap from "gsap";
 import Title from "./Title";
-import projects from "@/assets"; // your index.js export
+import { projects } from "@/assets/index.js";
+// import projects from "@/assets"; 
+
 
 const ProjectDetail = () => {
   const { id } = useParams();

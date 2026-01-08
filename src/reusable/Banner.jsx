@@ -114,9 +114,9 @@ const Banner = () => {
     /* ------------------ MENU SCREEN ------------------ */
     <div className="w-full bg-[url('/bounceBanner.png')] bg-contain lg:bg-cover  bg-no-repeat  bg-blue-500 flex flex-col rounded-sm items-center justify-center text-white p-5">
 
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-bounce">
+      {/* <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-bounce">
         Bouncy Ball
-      </h1>
+      </h1> */}
 
       <p className="text-lg opacity-70 mb-8 text-center max-w-[300px]">
         Tap the screen to jump and dodge the triangle!

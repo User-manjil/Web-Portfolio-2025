@@ -4,7 +4,7 @@ import Title from './Title';
 
 const Contact = () => {
      const contacts = [
-    "workspace0mzl@gmail.com",
+    "manjilaryal.dev@gmail.com",
     "whatsapp +977 9708023302",
     "Kathmandu, Nepal",
     "Response within in less than a Hour",
@@ -40,7 +40,7 @@ const Contact = () => {
               </p>
               {contacts.map((e) => {
                 return (
-                  <div className="flex border-b border-black m-1"> {e}</div>
+                  <div className="flex border-b border-black mt-2 py-5"> {e}</div>
                 );
               })}
             </div>
