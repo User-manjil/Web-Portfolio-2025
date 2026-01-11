@@ -8,10 +8,11 @@ import { gsap } from "gsap"
 import { Link } from "react-router-dom";
 import HoverPopup from "./reusable/Hoverpopup";
 import Banner from "./reusable/Banner";
-import { experience } from "./assets";
+import { experience, projects } from "./assets";
+
 const Home = () => {
   const velocity = 15;
-
+  const featuredProjects = projects.filter((p) => p.featured);
   const skills = [
     "HTML",
     "CSS",
@@ -79,29 +80,30 @@ const Home = () => {
               />
         </div> */}
         {/* //section Featured work  */}
-        <div id="work" className=" flex-col mt-10 justify-center lg:mt-30">
-          <Title heading="#Featured Work" />
-          <Project
-            title="Mitho Achar Ecommerce"
-            stack={["React", "Express", "Node"]}
-          />
-          <div className="flex-col ">
-          <Project title="Ai agent" stack={["Nextjs", "Node"]} />
-          <Project title="Clothing Brand" stack={["Nextjs", "Node"]} />
-          
-          <HoverPopup img={reactPic} imgRef={reactPic} >
-            <Project
-            title="Allusion Creative Agency"
-            stack={["Nextjs", "Node"]}
-          />
-          </HoverPopup>
-          </div>
-          <div className="flex mt-5 w-full justify-center">
-            <Link to={'/work'} className="border-2  text-white py-2 px-5 rounded-sm  bg-blue-500 " >See more</Link >
-          
-          </div>
-          
+        <div id="work" className="flex-col mt-10 justify-center lg:mt-30">
+      <Title heading="#Featured Work" />
+
+      {featuredProjects.map((p) => (
+        <div key={p.id} className="flex-col">
+          {p.hover ? (
+            <HoverPopup img={p.banner} imgRef={p.banner}>
+              <Project title={p.title} stack={p.stack} />
+            </HoverPopup>
+          ) : (
+            <Project title={p.title} stack={p.stack} />
+          )}
         </div>
+      ))}
+
+      <div className="flex mt-5 w-full justify-center">
+        <Link
+          to={"/work"}
+          className="border-2 text-white py-2 px-5 rounded-sm bg-blue-500"
+        >
+          See more
+        </Link>
+      </div>
+    </div>
         {/* section Skills  */}
         <div className="flex-col md:flex-row gap-10 my-10">
           <Title heading="#What I Know" />
